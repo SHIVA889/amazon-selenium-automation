@@ -1,0 +1,30 @@
+
+# taregt
+target/
+
+
+# Test execution output
+test-output/
+
+#  Compiled Java files
+*.class
+
+# IDE files
+.idea/
+*.iml
+  
+#  Eclipse
+.classpath
+.project
+.settings/
+
+#  Logs
+*.log
+
+#  OS files
+.DS_Store
+Thumbs.db
+
+
+#  ignore credentials 
+src/test/resources/testdata.properties
