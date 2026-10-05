@@ -24,7 +24,7 @@ public class WaitUtils {
 		
 	} 
 	
-	
+	 
 	// wait until the element is visible on the page 
 	public WebElement waitForVisibility(By locator) {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -34,7 +34,7 @@ public class WaitUtils {
 	public WebElement waitForClickability(By locator) {
 		return wait.until(ExpectedConditions.elementToBeClickable(locator));
 		
-	}
+	}  
 	
 	
 	// Waits until the element is present in the DOM.

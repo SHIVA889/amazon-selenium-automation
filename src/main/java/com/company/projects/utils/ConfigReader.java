@@ -18,15 +18,16 @@ public class ConfigReader {
 		
 		String configPath = FrameworkConstants.CONFIG_FILE_PATH;
 		
-		try(FileInputStream fileInputStream = new FileInputStream(configPath)){
+		try(FileInputStream fileInputStream = new FileInputStream(configPath))
+		{
 			properties = new Properties();
 			properties.load(fileInputStream);
-			
+			   
 		}catch (IOException e) {
 			throw new RuntimeException(
 					" Failed to load the english " , e);
-		}
-	}  
+		} 
+	}    
 	
 	public static String getProperties(String key) {
 		

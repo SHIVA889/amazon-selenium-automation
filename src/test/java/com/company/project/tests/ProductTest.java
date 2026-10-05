@@ -1,17 +1,19 @@
 package com.company.project.tests;
-
+ 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.company.project.pages.HomePage;
 import com.company.project.pages.ProductDetailsPage;
 import com.company.project.pages.SearchResultsPage;
 import com.company.projects.utils.TestDataReader;
-  
-public class ProductTest extends BaseTest {
 
+public class ProductTest{
+ 
+	WebDriver driver;
 	@Test( priority = 4,  groups= {"smoke","regression"})
 	public void verifyProductDetailsandAddToCart() {
-  
+    
 		// search for known product
 		HomePage homepage = new HomePage(driver);
 		String product  = TestDataReader.getTestData("searchProduct");

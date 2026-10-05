@@ -9,7 +9,7 @@ import com.company.projects.utils.TestDataReader;
 
 public class LoginTest extends BaseTest{
 	
-	  
+	      
 	@Test(priority = 1, groups =  {"smoke","regression"})
 	public void  validLogin() {
 		System.out.println("LOGIN TEST DRIVER = " + driver);
@@ -24,7 +24,7 @@ public class LoginTest extends BaseTest{
 		Assert.assertTrue(homepage.isAccountMenuDisplayed(),
 		        "Login was not successful");
 
-	}  
+	}    
 	
 	@Test( enabled=false,   groups = {"regression"})
 	public void invalidLogin() {

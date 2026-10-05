@@ -12,8 +12,7 @@ public class DriverManager {
 	private  DriverManager() {
 		// prevent object creation 
 	}
-	
-	
+	               
 	
 //	private static ThreadLocal<WebDriver> driver;
 	
@@ -23,22 +22,22 @@ public class DriverManager {
 			driver = new ChromeDriver();
 			break;
 			
-		case "firefix":
-			driver= new FirefoxDriver();
-			break;
+		case "firefix":  
+			driver=new FirefoxDriver();
+			break; 
 			
-		case "edge":
-			driver= new EdgeDriver();
+		case "edge": 
+			driver= new EdgeDriver(); 
 			break;
 
-		default:
+		default: 
 			throw new IllegalArgumentException(
 				" unsupported browser "+ browser);
 			
-		}
+		} 
 		
-	}
-
+	} 
+    
 	public static WebDriver getDriver() {
 		if (driver == null) {
 			throw  new IllegalStateException(

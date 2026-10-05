@@ -2,7 +2,7 @@ package com.company.project.constants;
 
 public final class FrameworkConstants {
 	
-
+  
 	private FrameworkConstants() {
 		// prevent object creation 
 	}

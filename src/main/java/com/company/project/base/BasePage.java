@@ -26,7 +26,7 @@ public class BasePage {
 	  
 	public void click(By locator) {
 		wait.waitForClickability(locator).click();
-	}
+	}                    
 
 	public void enterText(By locator, String text) {
 		WebElement element = wait.waitForClickability(locator);
@@ -41,11 +41,12 @@ public class BasePage {
 
 	public WebElement waitElementToBeVisible(By locator) { 
 		return wait.waitForVisibility(locator);  
-	}
+	}  
 
 	public WebElement waitForElementToBeClickable(By locator) {
 		return wait.waitForClickability(locator);
-	}
+	}  
+	
 	
 	public void openAccountMenu(By locator) {
 		WebElement accountMenu = 
@@ -53,11 +54,11 @@ public class BasePage {
 		
 		Actions actions = new Actions(driver);
 		actions.moveToElement(accountMenu).perform();
-		
-	}  
+		   
+	}         
 	
 	public void switchToNewWindow(String originalWindow) {
-		
+		  
 		// wait until extra window opens 
 	    wait.until(driver -> driver.getWindowHandles().size() > 1);
 
@@ -67,7 +68,7 @@ public class BasePage {
 	            driver.switchTo().window(windowHandle);
 	            break;
 	        }
-	    }  
+	    }    
 	}
 
 }

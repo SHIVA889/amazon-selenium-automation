@@ -13,9 +13,8 @@ public class CheckOutPage extends BasePage{
 	// Payment method needed here 
 	private By paymentCash= By.xpath("//input[@type='radio' and contains(@value,'paymentMethod=COD')]");
 	  
-	
 	// represents the final order total 
-	private By orderTotal = By.xpath("(//span[@data-shimmer-target='ordertotals-amount'])[6]");
+	private By orderTotal = By.xpath("//span[normalize-space()='Order Total:']/parent::div/following-sibling::div//span[@data-shimmer-target='ordertotals-amount']");
 	 
 	// continue button 
 	private By continueButton = By.xpath("//span[@id='checkout-secondary-continue-button-id']");
@@ -52,7 +51,6 @@ public class CheckOutPage extends BasePage{
 	public boolean isOrderSuccessfullyPlaced() {
 		return waitElementToBeVisible(placeOrderButton).isDisplayed();
 	}
-	
 	
 	public void placeOrder() {
 	    click(placeOrderButton);

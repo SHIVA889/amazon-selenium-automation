@@ -20,7 +20,7 @@ public class HomePage extends BasePage{
 	
 	public HomePage(WebDriver driver) {
 		super(driver);
-	}
+	} 
 	
 	public void searchProduct(String productName) {
 		enterText(searchbox, productName);// by locator and string text. 
@@ -31,7 +31,7 @@ public class HomePage extends BasePage{
 	// navigating to login 
 	public void navigatToLogin() {
 		click(loginButton);
-	}
+	}  
 	
 	// Opening a cart 
 	public void openCart() {

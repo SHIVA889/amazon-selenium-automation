@@ -50,7 +50,7 @@ public class SearchResultsPage extends BasePage {
                 .toList();
     }
 
-
+    																										
     // Returns the price of a specific product
     public String getProductPrice(String productNameToFind) {
 

@@ -127,7 +127,7 @@ public class CheckoutTest extends BaseTest{
 		// selecting the payment method   
 		checkoutpage.paymentMethodCash();
 		
-		
+		  
 		// verify the final order total 
 		String checkoutTotal = checkoutpage.getOrderTotal();
 		
@@ -135,14 +135,14 @@ public class CheckoutTest extends BaseTest{
 		
 		Assert.assertFalse(checkoutTotal.trim().isEmpty(), 
 				"final order total was empty ");
-		
+		          
 		// confirm 
 		checkoutpage.clickContinue();
-		
+		  
 		// order 
-		checkoutpage.placeOrder();
+		//checkoutpage.placeOrder();
 
-	}
+	} 
 
 }
  

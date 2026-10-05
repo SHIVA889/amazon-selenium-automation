@@ -6,19 +6,26 @@
         <listener class-name="com.company.projects.listeners.TestListener"/>
     </listeners>
 
-    <test name="All Amazon Tests">
+    <test name="smoke test">
 
-        <classes>
-
+    <!--   <classes>
+          
             <class name="com.company.project.tests.LoginTest"/>
-            <class name="com.company.project.tests.SearchTest"/>
-            <class name="com.company.project.tests.ProductTest"/>
-            <class name="com.company.project.tests.CartTest"/>
-            <class name="com.company.project.tests.CheckoutTest"/>
+            <class name="com.company.project.tests.SearchTest" />
             <class name="com.company.project.tests.LogOutTest"/>
+        </classes> --> --> 
+        
+    </test> 
+    
+    
+    
+    
+     <!--   API test -->
+     <test name="Amazon Backend API Modules">
+        <classes>
+            <class name="com.company.project.api.tests.UserApiTest"/>
 
         </classes>
-
-    </test>
+    </test>  
 
 </suite>

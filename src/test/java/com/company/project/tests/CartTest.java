@@ -1,6 +1,4 @@
 package com.company.project.tests;
-
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,14 +7,15 @@ import com.company.project.pages.HomePage;
 import com.company.project.pages.ProductDetailsPage;
 import com.company.project.pages.SearchResultsPage;
 
+
 public class CartTest extends BaseTest {
 
 
-	@Test(priority = 4 ,   groups = { "smoke", "regression" })
+	@Test(priority = 4 ,   groups =  "smoke" )
 	public void addProductToCart() {
 		HomePage homepage = new HomePage(driver);
 
-		homepage.searchProduct("laptop");
+		homepage.searchProduct("notebook");
 
 		SearchResultsPage searchresultpage = new SearchResultsPage(driver);
 
@@ -123,6 +122,4 @@ public class CartTest extends BaseTest {
 		    
 		}
 		
-	
-
 }

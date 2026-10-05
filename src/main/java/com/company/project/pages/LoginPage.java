@@ -18,13 +18,13 @@ public class LoginPage extends BasePage{
 	// here 
 	
 	public LoginPage(WebDriver driver) {
-		super(driver);
+		super(driver);  
 	}
-	    
+	      
 	// Enter name
 	public void enterName(String userNameValue) {
 		enterText(usernamePhonNum,  userNameValue);
-	}
+	}  
 	
 	// Enter Password 
 	public void enterPassword(String userPassword) {
@@ -49,12 +49,12 @@ public class LoginPage extends BasePage{
 		click(userNumContinue);
 		enterPassword(userPassword);
 		click(passSignButton);  
-		
-	}
+		  
+	}    
 	
 	public String getLoginError() {
 		return getElementText(errorMessage);
-	}
+	}  
 	  
 	public boolean isLoginPageDisplayed() {
 		return waitElementToBeVisible(loginPageIdentifier).isDisplayed();
@@ -69,5 +69,6 @@ public class LoginPage extends BasePage{
 	}
 
 }
+
 
 
