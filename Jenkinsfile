@@ -25,4 +25,26 @@ pipeline {
 			}
 		}
     }
+    
+    
+    post{
+		
+		always{
+			echo 'Pipeline execution completed'
+		}
+		
+		success{
+			echo 'Automation tests passes successfully'
+		}
+		
+		failure{
+			echo 'Automation pipeline failed ' 
+		}
+	}
+	
+	
+	
+	
+	
 }  
+
