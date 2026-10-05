@@ -70,7 +70,7 @@ public class UserApiTest extends BaseApi {
 	// verify userById
 	
 	@Test(groups = "api")  
-	public vo verifygetUserById() {
+	public void verifygetUserById() {
 
 		UserApi userspi = new UserApi(); 
 
@@ -78,7 +78,7 @@ public class UserApiTest extends BaseApi {
 		
 		
 
-		response.then().statusCode(201).body("id", equalTo(1));
+		response.then().statusCode(200).body("id", equalTo(1));
 	}
 	
 	
