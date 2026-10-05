@@ -1,3 +1,5 @@
+// CI pipeline for Amazon automation framework
+
 pipeline {
 
     agent any
