@@ -18,5 +18,11 @@ pipeline {
 				bat 'mvn test'
 			}
 		}
+		
+		stage('Publish and Reslt'){
+			steps{
+				junit 'target/surefire-reports/*.xml'
+			}
+		}
     }
 }  
