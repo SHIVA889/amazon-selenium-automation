@@ -33,40 +33,8 @@ public class UserApiTest extends BaseApi {
 	}
 	  
 	
-
-//	
-//	@DataProvider(name = "userData")
-//	public Object[][] userData() {
-//
-//	    return new Object[][] {
-//	        {"John", "john123", "john@gmail.com"},
-//	        {"Mike", "mike123", "mike@gmail.com"},
-//	        {"David", "david123", "david@gmail.com"}
-//	    };
-//	}
-	  
 	
-	// It provides data to this method 
-//	@Test(dataProvider =  "userData")
-//	public void verifycreateUser(String name , String username , String email) {
-//		UserApi userapi = new UserApi();
-//		
-//		User user = new User();
-//		user.setName(name);
-//		user.setUsername(username);
-//		user.setEmail(email);
-//
-//		Response response = userapi.createUser(user);
-//		
-//		
-//		User responseuser = response.as(User.class);
-//		System.out.println(responseuser.getName());
-//		
-//		response.then()
-//		.spec(ResponseSpecifi.createResponseSpec());
-//		
-//			
-//	}		
+	// Data Driven  Testing 
 	
 	@DataProvider(name = "userData")
 	public Object[][] userData() {
@@ -80,7 +48,7 @@ public class UserApiTest extends BaseApi {
 	@Test(dataProvider = "userData")
 	public void verifycreateUser(String name, String username, String email) {
 	    UserApi userapi = new UserApi();
-	    
+	      
 	    // FIX: Map the parameters provided by the DataProvider
 	    User user = new User();
 	    user.setName(name);          
@@ -96,7 +64,7 @@ public class UserApiTest extends BaseApi {
 	            .spec(ResponseSpecifi.createResponseSpec());
 	}
 
-//			
+			
 		
   
 	
