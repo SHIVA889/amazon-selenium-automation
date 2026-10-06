@@ -76,9 +76,9 @@ public class UserApiTest extends BaseApi {
 
 		Response response = userspi.getUserById(1);
 		
-		
+		  
 
-		response.then().statusCode(204).body("id", equalTo(1));
+		response.then().statusCode(200).body("id", equalTo(1));
 	}
 	
 	
