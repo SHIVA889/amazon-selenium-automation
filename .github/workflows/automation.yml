@@ -28,9 +28,20 @@ jobs:
       - name: Run Maven tests
         run: mvn clean test
 
+      - name: Show generated files
+        if: always()
+        run: |
+          echo "===== TARGET ====="
+          find target -type f 2>/dev/null || true
+          
+          echo "===== TEST OUTPUT ====="
+          find test-output -type f 2>/dev/null || true
+
       - name: Upload Test Report
-        if: ${{ always() }}
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: emailable-test-report
-          path: test-output/emailable-report.html
+          name: test-reports
+          path: |
+            test-output/
+            target/surefire-reports/
