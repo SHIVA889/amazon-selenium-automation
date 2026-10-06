@@ -2,16 +2,20 @@ name: Amazon Automation
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
+
   workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    
-    steps:  
+
+    steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -20,13 +24,13 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-  
+
       - name: Run Maven tests
-        run: mvn clean test  
-		 
+        run: mvn clean test
+
       - name: Upload Test Report
+        if: ${{ always() }}
         uses: actions/upload-artifact@v4
-        if: always() # Ensures the report uploads even if tests fail
         with:
           name: emailable-test-report
-          path: test-output/emailable-report.html # Update to your framework's actual report path
+          path: test-output/emailable-report.html
