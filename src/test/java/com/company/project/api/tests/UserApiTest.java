@@ -59,7 +59,7 @@ public class UserApiTest extends BaseApi {
 	    
 	    User responseuser = response.as(User.class);
 	    System.out.println(responseuser.getName());
-	    
+	      
 	    response.then()
 	            .spec(ResponseSpecifi.createResponseSpec());
 	}
@@ -78,7 +78,7 @@ public class UserApiTest extends BaseApi {
 		
 		
 
-		response.then().statusCode(200).body("id", equalTo(1));
+		response.then().statusCode(204).body("id", equalTo(1));
 	}
 	
 	
