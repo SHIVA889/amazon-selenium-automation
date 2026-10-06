@@ -22,11 +22,11 @@ jobs:
           distribution: 'temurin'
   
       - name: Run Maven tests
-        run: mvn clean test
+        run: mvn clean test  
 		 
       - name: Upload Test Report
         uses: actions/upload-artifact@v4
         if: always() # Ensures the report uploads even if tests fail
         with:
           name: emailable-test-report
-          path: path/to/your/emailable-report.html # Update to your framework's actual report path
+          path: test-output/emailable-report.html # Update to your framework's actual report path
