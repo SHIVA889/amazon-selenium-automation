@@ -5,7 +5,7 @@ TestNG, and Page Object Model (POM) to automate key Amazon e-commerce
 workflows.
 
 ## Note -
- - It  has a method placeOrder() don not use that method , it will order the product in your account , be aware of that . It is just for automation purpose. 
+ - It  has a method placeOrder() do not use that method , it will order the product in your account , be aware of that . It is just for automation purpose. 
 
 
 ##Technologies used
