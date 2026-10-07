@@ -1,0 +1,35 @@
+<suite name="Amazon regression suite">
+
+	<listeners>
+		<listener class-name="com.company.projects.listeners.TestListener" />
+
+	</listeners>
+
+	<test name="regression test">
+
+		<grousp>
+			<run>
+
+				<include name="regression" />
+
+			</run>
+		</grousp>
+
+
+		<classes>
+
+
+			<class name="com.company.project.tests.LoginTest" />
+
+			<class name="com.company.project.tests.SearchTest" />
+
+			<class name="com.company.project.tests.CartTest" />
+
+			<class name="com.company.project.tests.LogOutTest" />
+
+		</classes>
+
+	</test>
+
+
+</suite>

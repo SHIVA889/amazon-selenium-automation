@@ -78,7 +78,7 @@ public class CheckoutTest extends BaseTest{
 	
 	// ==========================================================================================
 	  
-	@Test(priority = 6 ,   groups = {"smoke","regression"})
+	@Test(priority = 6 ,   groups = {"regression"})
 	public void completeCheckout() {
 		
 		

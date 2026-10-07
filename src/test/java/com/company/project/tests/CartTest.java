@@ -11,7 +11,7 @@ import com.company.project.pages.SearchResultsPage;
 public class CartTest extends BaseTest {
 
 
-	@Test(priority = 4 ,   groups =  "smoke" )
+	@Test(priority = 4 ,   groups =  "regression" )
 	public void addProductToCart() {
 		HomePage homepage = new HomePage(driver);
 

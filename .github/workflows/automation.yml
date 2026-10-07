@@ -12,10 +12,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+
+  smoke:
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -25,15 +28,15 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Run Maven tests
-        run: mvn clean test
+      - name: Run Smoke Tests
+        run: mvn clean test -Dsurefire.suiteXmlFiles=testng-smoke.xml
 
       - name: Show generated files
         if: always()
         run: |
           echo "===== TARGET ====="
           find target -type f 2>/dev/null || true
-          
+
           echo "===== TEST OUTPUT ====="
           find test-output -type f 2>/dev/null || true
 
@@ -41,7 +44,44 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-reports
+          name: smoke-test-reports
+          path: |
+            test-output/
+            target/surefire-reports/
+
+
+  regression:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Run Regression Tests
+        run: mvn clean test -Dsurefire.suiteXmlFiles=testng-regression.xml
+
+      - name: Show generated files
+        if: always()
+        run: |
+          echo "===== TARGET ====="
+          find target -type f 2>/dev/null || true
+
+          echo "===== TEST OUTPUT ====="
+          find test-output -type f 2>/dev/null || true
+
+      - name: Upload Test Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: regression-test-reports
           path: |
             test-output/
             target/surefire-reports/

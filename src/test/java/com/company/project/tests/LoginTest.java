@@ -8,7 +8,7 @@ import com.company.project.pages.LoginPage;
 import com.company.projects.utils.TestDataReader;
 
 public class LoginTest extends BaseTest{
-	
+	  
 	      
 	@Test(priority = 1, groups =  {"smoke","regression"})
 	public void  validLogin() {

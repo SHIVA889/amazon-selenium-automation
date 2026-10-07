@@ -22,7 +22,7 @@ public class DriverManager {
 			driver = new ChromeDriver();
 			break;
 			
-		case "firefix":  
+		case "firefox":  
 			driver=new FirefoxDriver();
 			break; 
 			

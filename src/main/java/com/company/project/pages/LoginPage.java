@@ -15,7 +15,7 @@ public class LoginPage extends BasePage{
 	private By errorMessage = By.xpath("//div[@id='auth-error-message-box']");
 	private By loginPageIdentifier  = By.cssSelector("input#ap_email_login");
 	private By accountAndListsButton  = By.xpath("//span[contains(text(),'Account & Lists')]");
-	// here 
+	
 	
 	public LoginPage(WebDriver driver) {
 		super(driver);  

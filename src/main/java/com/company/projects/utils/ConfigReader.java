@@ -25,7 +25,7 @@ public class ConfigReader {
 			   
 		}catch (IOException e) {
 			throw new RuntimeException(
-					" Failed to load the english " , e);
+					" Failed to load the data " , e);
 		} 
 	}    
 	
