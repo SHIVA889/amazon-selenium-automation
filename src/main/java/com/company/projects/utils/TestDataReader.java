@@ -16,8 +16,8 @@ public class TestDataReader {
 
         properties = new Properties();
 
-        String username = System.getenv("AMAZON_USERNAME");
-        String password = System.getenv("AMAZON_PASSWORD");
+        String username = System.getenv("AM_USERNAME");
+        String password = System.getenv("AM_PASSWORD");
 
         if (username != null && password != null) {
 
