@@ -2,6 +2,7 @@ package com.company.project.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -13,13 +14,20 @@ public class DriverManager {
 		// prevent object creation 
 	}
 	               
-	
+	  
 //	private static ThreadLocal<WebDriver> driver;
 	
 	public static void initializeBrowser(String browser) {
-		switch (browser.toLowerCase()) {
+		switch (browser.toLowerCase()) {  
 		case "chrome":
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+
+			options.addArguments("--headless=new");
+			options.addArguments("--no-sandbox");
+			options.addArguments("--disable-dev-shm-usage");
+
+			driver = new ChromeDriver(options);
+			
 			break;
 			
 		case "firefox":  
