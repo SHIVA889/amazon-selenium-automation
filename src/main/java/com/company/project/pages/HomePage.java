@@ -13,11 +13,11 @@ public class HomePage extends BasePage{
 	private By loginButton = By.id("ap_email_login");
 	private By cartButton = By.id("nav-cart-count");
 	private By productsTitle = By.xpath("//div[@class ='inventory_item_name ']");
-	private By accountAndListsButton = By.cssSelector("#nav-link-accountList-nav-line-1");
+	private By accountAndListsButton = By.cssSelector("#nav-link-accountList");
 	private By logOutButton = By.cssSelector("#nav-item-signout");
 	
 	
-	
+	  
 	public HomePage(WebDriver driver) {
 		super(driver);
 	} 
@@ -46,7 +46,7 @@ public class HomePage extends BasePage{
 		openAccountMenu(accountAndListsButton);
 	}
 	  
-	 
+	   
 
 	
 	public void logOut() {

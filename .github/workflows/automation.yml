@@ -18,8 +18,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      AMAZON_USERNAME: ${{ secrets.AM_USERNAME }}
-      AMAZON_PASSWORD: ${{ secrets.AM_PASSWORD }}
+      AM_USERNAME: ${{ secrets.AM_USERNAME }}
+      AM_PASSWORD: ${{ secrets.AM_PASSWORD }}
 
     steps:
 
@@ -59,8 +59,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      AMAZON_USERNAME: ${{ secrets.AMAZON_USERNAME }}
-      AMAZON_PASSWORD: ${{ secrets.AMAZON_PASSWORD }}
+      AM_USERNAME: ${{ secrets.AM_USERNAME }}
+      AM_PASSWORD: ${{ secrets.AM_PASSWORD }}
 
     steps:
 

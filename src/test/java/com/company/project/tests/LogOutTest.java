@@ -6,21 +6,23 @@ import org.testng.annotations.Test;
 
 import com.company.project.pages.HomePage;
 import com.company.project.pages.LoginPage;
+import com.company.projects.utils.TestDataReader;
 
-public class LogOutTest extends BaseTest{
+public class LogOutTest extends BaseTest {
 
-	@Test( priority = 7 , groups = {"smoke","regression"})
+	@Test(priority = 7, groups = { "smoke", "regression" })
 	public void verifyLogout() {
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.login("9844423990","shivakumar2233");
-		
-		HomePage  homepage = new HomePage(driver);
+		String username = TestDataReader.getTestData("username");
+		String password = TestDataReader.getTestData("password");
+
+		loginpage.login(username, password);
+
+		HomePage homepage = new HomePage(driver);
 		homepage.logOut();
-		 
-		// verify logout 
-		Assert.assertTrue(loginpage.isLoginPageDisplayed(), 
-				" log in page is not displyed after log out ");
-		
-		
+
+		// verify logout
+		Assert.assertTrue(loginpage.isLoginPageDisplayed(), " log in page is not displyed after log out ");
+
 	}
 }
