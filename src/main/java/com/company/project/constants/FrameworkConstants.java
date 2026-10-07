@@ -13,6 +13,6 @@ public final class FrameworkConstants {
 	
 	// default explicit wait timeout 
 	public static final int EXPLICIT_WAIT =
-			10;
+			30;
 	
 }
