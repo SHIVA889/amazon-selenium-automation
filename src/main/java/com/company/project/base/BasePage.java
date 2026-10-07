@@ -29,8 +29,8 @@ public class BasePage {
 	}                    
 
 	public void enterText(By locator, String text) {
-		WebElement element = wait.waitForClickability(locator);
-		element.clear();
+		WebElement element = wait.waitForVisibility(locator);
+		element.clear();  
 		element.sendKeys(text);
 
 	}

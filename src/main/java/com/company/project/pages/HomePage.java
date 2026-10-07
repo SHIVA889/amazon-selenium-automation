@@ -9,7 +9,7 @@ import com.company.project.base.BasePage;
 
 public class HomePage extends BasePage{
 	
-	private  By searchbox = By.id("twotabsearchtextbox");
+	private  By searchbox = By.xpath("//input[@id='twotabsearchtextbox']");
 	private By loginButton = By.id("ap_email_login");
 	private By cartButton = By.id("nav-cart-count");
 	private By productsTitle = By.xpath("//div[@class ='inventory_item_name ']");
@@ -23,9 +23,11 @@ public class HomePage extends BasePage{
 	} 
 	
 	public void searchProduct(String productName) {
-		enterText(searchbox, productName);// by locator and string text. 
-		waitForElementToBeClickable(searchbox).sendKeys(Keys.ENTER);
-		
+//		enterText(searchbox, productName);
+//		waitForElementToBeClickable(searchbox).sendKeys(Keys.ENTER);
+		enterText(searchbox, productName + Keys.ENTER);
+	
+		  
 	}
 	
 	// navigating to login 

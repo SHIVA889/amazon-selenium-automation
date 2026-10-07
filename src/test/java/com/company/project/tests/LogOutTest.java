@@ -12,9 +12,11 @@ public class LogOutTest extends BaseTest {
 
 	@Test(priority = 7, groups = { "smoke", "regression" })
 	public void verifyLogout() {
-		LoginPage loginpage = new LoginPage(driver);
-		String username = TestDataReader.getTestData("username");
-		String password = TestDataReader.getTestData("password");
+		LoginPage loginpage = new LoginPage(driver);  
+		String username = System.getenv("AM_USERNAME");
+		String password = System.getenv("AM_PASSWORD");
+//		String username = TestDataReader.getTestData("username");
+//		String password = TestDataReader.getTestData("password");
 
 		loginpage.login(username, password);
 

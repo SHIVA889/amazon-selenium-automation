@@ -9,14 +9,17 @@ import com.company.projects.utils.TestDataReader;
 
 public class LoginTest extends BaseTest{
 	  
-	      
+	        
 	@Test(priority = 1, groups =  {"smoke","regression"})
 	public void  validLogin() {
 		System.out.println("LOGIN TEST DRIVER = " + driver);
 		LoginPage loginpage = new LoginPage(driver);
-		String username = TestDataReader.getTestData("username");
-		String password = TestDataReader.getTestData("password");
-		 
+//		String username = TestDataReader.getTestData("username");
+//		String password = TestDataReader.getTestData("password");  
+		
+		String username = System.getenv("AM_USERNAME");
+		String password = System.getenv("AM_PASSWORD");  
+		     
 		loginpage.login(username, password);
 	    
 //		// verify login                                                         
