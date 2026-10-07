@@ -6,50 +6,47 @@ import java.util.Properties;
 
 public class TestDataReader {
 
-    private static Properties properties;
+	private static Properties properties;
 
-    static {
-        loadTestData();
-    }
+	static {
+		loadTestData();
+	}
 
-    private static void loadTestData() {
+	private static void loadTestData() {
 
-        properties = new Properties();
+		properties = new Properties();
 
-        String username = System.getenv("AM_USERNAME");
-        String password = System.getenv("AM_PASSWORD");
+		String username = System.getenv("AM_USERNAME");
+		String password = System.getenv("AM_PASSWORD");
 
-        if (username != null && password != null) {
+		if (username != null && password != null) {
 
-            properties.setProperty("username", username);
-            properties.setProperty("password", password);
+			properties.setProperty("username", username);
+			properties.setProperty("password", password);
 
-        } else {
+		}
 
-            String testDataPath = "src/test/resources/testdata.properties";
+		String testDataPath = "src/test/resources/testdata.example.properties";
 
-            try (FileInputStream fileInputStream =
-                         new FileInputStream(testDataPath)) {
+		try (FileInputStream fileInputStream = new FileInputStream(testDataPath)) {
 
-                properties.load(fileInputStream);
+			properties.load(fileInputStream);
 
-            } catch (IOException e) {
+		} catch (IOException e) {
 
-                throw new RuntimeException(
-                        "Failed to load test data properties file", e);
-            }
-        }
-    }
+			throw new RuntimeException("Failed to load test data properties file", e);
+		}
 
-    public static String getTestData(String key) {
+	}
 
-        String value = properties.getProperty(key);
+	public static String getTestData(String key) {
 
-        if (value == null || value.trim().isEmpty()) {
-            throw new RuntimeException(
-                    "Test data is not found or empty: " + key);
-        }
+		String value = properties.getProperty(key);
 
-        return value.trim();
-    }
+		if (value == null || value.trim().isEmpty()) {
+			throw new RuntimeException("Test data is not found or empty: " + key);
+		}
+
+		return value.trim();
+	}
 }
