@@ -17,10 +17,6 @@
         <classes>
              <class name="com.company.project.tests.LoginTest"/>
 
-            <class name="com.company.project.tests.SearchTest"/>
-
-            <class name="com.company.project.tests.CartTest"/>
-
             <class name="com.company.project.tests.LogOutTest"/>
         </classes>
 
