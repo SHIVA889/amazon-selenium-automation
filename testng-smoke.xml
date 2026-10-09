@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 
 <suite name="Amazon Smoke Suite">
 
@@ -6,23 +5,25 @@
         <listener class-name="com.company.projects.listeners.TestListener"/>
     </listeners>
 
-    <test name="api Tests">
-
+    <!-- Block 1: Fast API Tests -->
+    <test name="API Performance Tests">
         <groups>
             <run>
-                <include name="api"/>
-                <include name="smoke"/>
-            </run>
+            <include name="api"/></run>
         </groups>
-
         <classes>
-        		<class name="com.company.project.tests.LoginTest"/>
-        		<class name="com.company.project.tests.LogOutTest"/>
-             <class name="com.company.project.api.tests.UserApiTest"/>
-
-           
+            <class name="com.company.project.api.tests.UserApiTest"/>
         </classes>
+    </test>
 
+    <!-- Block 2: Slower Selenium UI Tests -->
+    <test name="UI Functional Tests">
+        <groups>
+            <run><include name="ui"/></run>
+        </groups>
+        <classes>
+            <class name="com.company.project.ui.tests.LoginTest"/>
+        </classes>
     </test>
 
 </suite>
