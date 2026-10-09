@@ -15,9 +15,9 @@
         </groups>
 
         <classes>
-             <class name="com.company.project.tests.LoginTest"/>
+             <class name="com.company.project.api.tests.UserApi.java"/>
 
-            <class name="com.company.project.tests.LogOutTest"/>
+           
         </classes>
 
     </test>
