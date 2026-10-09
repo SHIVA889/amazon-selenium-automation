@@ -6,11 +6,11 @@
         <listener class-name="com.company.projects.listeners.TestListener"/>
     </listeners>
 
-    <test name="Smoke Tests">
+    <test name="api Tests">
 
         <groups>
             <run>
-                <include name="smoke"/>
+                <include name="api"/>
             </run>
         </groups>
 
