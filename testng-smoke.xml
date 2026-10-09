@@ -15,7 +15,7 @@
         </groups>
 
         <classes>
-             <class name="com.company.project.api.tests.UserApi.java"/>
+             <class name="com.company.project.api.tests.UserApiTest.java"/>
 
            
         </classes>
