@@ -7,10 +7,10 @@ import java.util.Properties;
 public class TestDataReader {
 
     private static Properties properties;
-
+  
     static {
         loadTestData();
-    }
+    }  
 
     private static void loadTestData() {
         properties = new Properties();
@@ -29,7 +29,7 @@ public class TestDataReader {
         if (username != null && !username.trim().isEmpty()) {
             properties.setProperty("username", username.trim());
         }
-
+  
         if (password != null && !password.trim().isEmpty()) {
             properties.setProperty("password", password.trim());
         }

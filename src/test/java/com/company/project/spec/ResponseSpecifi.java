@@ -13,7 +13,7 @@ public class ResponseSpecifi {
 				.build()  
 				;  
 	}  
-	    
+	      
 	
 	public static ResponseSpecification createResponseSpec() {
 		return new  ResponseSpecBuilder()

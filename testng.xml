@@ -6,18 +6,6 @@
         <listener class-name="com.company.projects.listeners.TestListener"/>
     </listeners>
 
-    <test name="smoke test">
-        <groups>
-            <run>  
-                <include name="smoke"/>
-            </run>
-        </groups>
-        <classes>
-            <class name="com.company.project.tests.LoginTest"/>
-            <class name="com.company.project.tests.SearchTest"/>
-            <class name="com.company.project.tests.LogOutTest"/>
-        </classes>
-    </test> 
     
     
     
