@@ -28,3 +28,4 @@ jobs:
 
       - name: Run Smoke Tests
         run: mvn clean test -Dsurefire.suiteXmlFiles=testng-smoke.xml
+		

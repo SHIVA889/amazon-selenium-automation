@@ -1,5 +1,4 @@
 package com.company.project.tests;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -25,3 +24,5 @@ public class LogOutTest extends BaseTest {
 
 	}  
 }
+
+
