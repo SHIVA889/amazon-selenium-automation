@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.company.project.pages.HomePage;
 import com.company.project.pages.SearchResultsPage;
 import com.company.projects.utils.TestDataReader;
-
+   
 public class SearchTest extends BaseTest {
   
 	@Test(priority =  3 ,  groups= {"smoke","regression"})

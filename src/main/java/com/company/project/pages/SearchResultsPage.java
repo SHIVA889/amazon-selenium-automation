@@ -79,7 +79,7 @@ public class SearchResultsPage extends BasePage {
   
     
     
- // Finds the matching product, clicks it, and handles both same-tab and new-tab navigation.
+    // Finds the matching product, clicks it, and handles both same-tab and new-tab navigation.
     public void selectProduct(String productNameToFind) {
 
         String originalWindow = driver.getWindowHandle();
@@ -111,6 +111,7 @@ public class SearchResultsPage extends BasePage {
                 // If a new tab opened, switch to it.
                 if (driver.getWindowHandles().size() > originalWindowCount) {
                     switchToNewWindow(originalWindow);
+                }
 
                 return;
             }
@@ -119,7 +120,5 @@ public class SearchResultsPage extends BasePage {
         throw new RuntimeException(
                 "Product not found: " + productNameToFind
         );
-    }
-    
     }
 }

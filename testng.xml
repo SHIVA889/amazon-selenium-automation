@@ -7,14 +7,16 @@
     </listeners>
 
     <test name="smoke test">
-
-    <!--   <classes>
-          
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
             <class name="com.company.project.tests.LoginTest"/>
-            <class name="com.company.project.tests.SearchTest" />
+            <class name="com.company.project.tests.SearchTest"/>
             <class name="com.company.project.tests.LogOutTest"/>
-        </classes> --> --> 
-        
+        </classes>
     </test> 
     
     
@@ -24,7 +26,6 @@
      <test name="Amazon Backend API Modules">
         <classes>
             <class name="com.company.project.api.tests.UserApiTest"/>
-
         </classes>
     </test>  
 

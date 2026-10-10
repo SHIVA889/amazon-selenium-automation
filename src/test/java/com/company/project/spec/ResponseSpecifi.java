@@ -8,12 +8,12 @@ public class ResponseSpecifi {
 	
 	public static ResponseSpecification getResponseSpec() {
 		return new ResponseSpecBuilder()
-				.expectStatusCode(200)
 				.expectContentType("application/json")
-				.build()
+				.expectStatusCode(200)
+				.build()  
 				;  
 	}  
-	  
+	    
 	
 	public static ResponseSpecification createResponseSpec() {
 		return new  ResponseSpecBuilder()
@@ -25,7 +25,6 @@ public class ResponseSpecifi {
 	public static ResponseSpecification deleteResponseSpec() {
 		return  new ResponseSpecBuilder()
 		.expectStatusCode(204)
-		.expectContentType("application/json")  
 		.build();
 	}  
 }

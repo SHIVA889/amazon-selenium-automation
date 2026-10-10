@@ -45,7 +45,7 @@ public class UserApiTest extends BaseApi {
 	    };
 	}
 
-	@Test(dataProvider = "userData")
+	@Test(groups = "api" , dataProvider  = "userData")
 	public void verifycreateUser(String name, String username, String email) {
 	    UserApi userapi = new UserApi();
 	      

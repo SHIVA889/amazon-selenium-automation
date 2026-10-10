@@ -1,7 +1,6 @@
 package com.company.project.tests;
 
 import org.testng.Assert;
-//import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import com.company.project.pages.HomePage;
@@ -13,10 +12,8 @@ public class LogOutTest extends BaseTest {
 	@Test(priority = 7, groups = { "smoke", "regression" })
 	public void verifyLogout() {
 		LoginPage loginpage = new LoginPage(driver);  
-		String username = System.getenv("AM_USERNAME");
-		String password = System.getenv("AM_PASSWORD");
-//		String username = TestDataReader.getTestData("username");
-//		String password = TestDataReader.getTestData("password");
+		String username = TestDataReader.getTestData("username");
+		String password = TestDataReader.getTestData("password");
 
 		loginpage.login(username, password);
 

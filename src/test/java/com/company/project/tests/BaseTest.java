@@ -31,7 +31,7 @@ public class BaseTest {
 	 @AfterMethod
 	  public void tearDown(ITestResult result) {
 
-	        if (result.getStatus() == ITestResult.FAILURE) {
+	        if (result.getStatus() == ITestResult.FAILURE && driver != null) {
 
 	            ScreenshotUtils.captureScreenshot(
 	                    driver,
@@ -39,7 +39,7 @@ public class BaseTest {
 	            );  
 	        } 
 
-//	         DriverManager.quitDriver();
+	        DriverManager.quitDriver();
 	    }
 	
-}  
+}
