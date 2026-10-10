@@ -8,7 +8,7 @@
 
     <test name="smoke test">
         <groups>
-            <run>
+            <run>  
                 <include name="smoke"/>
             </run>
         </groups>
