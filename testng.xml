@@ -8,8 +8,6 @@
 
     
     
-    
-    
      <!--   API test -->
      <test name="Amazon Backend API Modules">
         <classes>

@@ -49,7 +49,7 @@ public class RegistrationPage extends BasePage {
 	private By nameError = By.cssSelector("#auth-customerName-missing-alert");
 	private By mobileOrEmailError = By.cssSelector("#auth-email-missing-alert");
 	private By passwordError = By.cssSelector("#auth-password-missing-alert");
-	
+
 	public String  getErronName() {
 		return getElementText(nameError);
 	}  

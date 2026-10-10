@@ -23,5 +23,5 @@ public class LogOutTest extends BaseTest {
 		// verify logout
 		Assert.assertTrue(loginpage.isLoginPageDisplayed(), " log in page is not displyed after log out ");
 
-	}
+	}  
 }
