@@ -1,50 +1,41 @@
-// CI pipeline for Amazon automation framework
-
+// CI pipeline 
 pipeline {
-
     agent any
+
     stages {
-        stage('Build') {
-
+        stage('Build & Compile') {
             steps {
-
-                bat 'mvn clean test'
+                // 'mvn clean compile' prepares the project without running tests yet
+                bat 'mvn clean compile'
             }
         }
         
-      	stage('Test'){
-			
-			steps{
-				bat 'mvn test'
-			}
-		}
+        stage('Test') {
+            steps {
+                // This executes test cases 
+                bat 'mvn test'
+            }
+        }
 		
-		stage('Publish and Reslt'){
-			steps{
-				junit 'target/surefire-reports/*.xml'
-			}
-		}
+        stage('Publish Results') {
+            steps {
+                // Captures and displays  TestNG/JUnit test reports in Jenkins
+                junit 'target/surefire-reports/*.xml'
+            }
+        }
     }
     
-    
-    post{
+    post {
+        always {
+            echo 'Pipeline execution completed.'
+        }
 		
-		always{
-			echo 'Pipeline execution completed'
-		}
+        success {
+            echo 'Automation tests passed successfully!'
+        }
 		
-		success{
-			echo 'Automation tests passes successfully'
-		}
-		
-		failure{
-			echo 'Automation pipeline failed ' 
-		}
-	}
-	
-	
-	
-	
-	
-}  
-
+        failure {
+            echo 'Automation pipeline failed. Please check the test reports.' 
+        }
+    }
+}

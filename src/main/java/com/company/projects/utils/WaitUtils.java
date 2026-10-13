@@ -31,10 +31,12 @@ public class WaitUtils {
 	}
 	
 	// wait for element to be present and  click able
+
 	public WebElement waitForClickability(By locator) {
-		return wait.until(ExpectedConditions.elementToBeClickable(locator));
-		
-	}  
+	    return wait.until(
+	        ExpectedConditions.elementToBeClickable(locator)
+	    );
+	}
 	
 	
 	// Waits until the element is present in the DOM.

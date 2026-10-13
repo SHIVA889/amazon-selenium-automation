@@ -18,9 +18,9 @@ public class ScreenshotUtils {
 	private ScreenshotUtils() {
 		// prevent object creation 
 	}
-	
+	  
 	public static String  captureScreenshot(WebDriver driver, String screenshotName) {
-		
+		  
 		if(driver== null) {
 			throw new IllegalArgumentException(" driver can't be null ");
 		}

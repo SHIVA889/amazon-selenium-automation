@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  
 public class DriverManager {  
 	
-	private static WebDriver driver;
+	private static WebDriver driver; // no can able to alter from outside 
 	
 	private  DriverManager() {
 		// prevent object creation 
